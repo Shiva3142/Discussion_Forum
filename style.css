@@ -1,0 +1,89 @@
+body {
+    margin-bottom: 40px;
+    font-family: 'Architects Daughter', cursive;
+    background: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.homecaption {
+    background-color: #0db1fd7c;
+}
+.footer {
+    position: fixed;
+    height: 30px;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    background-color: rgb(150, 159, 160);
+    font-weight: bold;
+}
+
+.cardheader {
+    background-color: rgb(125 184 251) !important;
+}
+
+.formheading {
+    text-align: center;
+    color: #fffafa;
+}
+
+.contactform {
+    padding: 50px 0;
+}
+
+.form {
+    width: 70%;
+    margin: auto;
+    padding: 0 20px;
+    overflow: hidden;
+    outline: none;
+}
+
+.inputtext {
+    width: 100%;
+    margin: 15px 0;
+    background: #000;
+    padding: 12px 12px;
+    color: #fffafa;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.inputtext:focus,.inputtext:hover {
+    box-shadow: 0 0 10px 5px aqua;
+}
+.instructions{
+    background: #bdc3c7;
+}
+
+textarea.inputtext {
+    resize: none;
+    height: 120px;
+}
+
+.contactformbutton {
+    float: right;
+    background-color: #0a3d62;
+    color: #fffafa;
+    padding: 10px 50px;
+    border-radius: 25px;
+}
+.contactformbutton:hover{
+    background-color: #82ccdd;
+}
+
+.postedby {
+    color: rgb(17, 0, 255);
+}
+
+@media screen and (max-width:500px) {
+    .form {
+        width: 95%;
+
+    }
+    .contactformbutton {
+        padding: 10px 30px;
+    }
+}

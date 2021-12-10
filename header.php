@@ -112,3 +112,27 @@ if (isset($_SESSION['nosignup'])) {
     session_destroy();
   }
 }
+?>
+<style>
+  .author {
+    position: fixed;
+    bottom: 0;
+    right: 0px;
+    background-color: aqua;
+    padding: 5px;
+    font-size: 18px;
+    z-index: 100;
+  }
+  @media (max-width:768px) {
+
+    .author {
+      position: fixed;
+      bottom: 0;
+      right: 0px;
+      background-color: aqua;
+      padding: 5px;
+      font-size: 12px;
+    }
+  }
+</style>
+<div class="author">Created By : Shivkumar Chauhan</div>

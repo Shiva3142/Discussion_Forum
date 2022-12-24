@@ -10,6 +10,7 @@ session_start();
     <title>thread Page Of Forum</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
     <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
@@ -17,8 +18,25 @@ session_start();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
     </script>
 </head>
+<?php
+  if (isset($_SESSION['username'])) {
+    if ($_SESSION['username'] == "Sksingh") {
+      echo '
+      <body>
+        ';
+    }else{
+        echo '
+        <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+        ';
+    }
+}else{
+      echo '
+      <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+      ';
+  }
+?>
 
-<body>
+
     <?php
     include 'header.php';
     include 'dbconnect.php';
@@ -52,6 +70,7 @@ session_start();
         }
     }
     ?>
+<h3 class="text-center" style="background:white;padding:10px;">Your IP address : <?php echo $_SERVER['REMOTE_ADDR'];?></h3>
     <?php
     $sql = "SELECT*FROM threads WHERE topic_id=$topic_id";
     $result = mysqli_query($conn, $sql);

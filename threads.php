@@ -25,6 +25,11 @@ session_start();
     include 'signupmodal.php';
     $thread_id = $_GET['thread_id'];
     ?>
+
+
+
+
+
     <?php
     if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $topic_title = $_POST['topic'];
@@ -57,6 +62,10 @@ session_start();
         }
     }
     ?>
+
+<h3 class="text-center" style="background:white;padding:10px;font-size:inherit;">Your IP address : '
+<?php echo $_SERVER['REMOTE_ADDR'];?>
+</h3>
     <?php
     $sql = "SELECT*FROM categories WHERE thread_id=$thread_id";
     $result = mysqli_query($conn, $sql);
